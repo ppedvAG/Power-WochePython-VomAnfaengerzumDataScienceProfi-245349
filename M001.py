@@ -20,3 +20,18 @@ if 3 in list4 or 7 in list4 or 10 in list4:
 	print()
 
 print({3, 7, 10}.intersection(list4))
+
+##################
+
+for i in range(1, 200):
+	s = str(i)
+	if i % 100 in [11, 12, 13]:
+		print(f"{i}th")
+	elif s[-1] == "1":
+		print(f"{i}st")
+	elif i % 10 == 2:
+		print(f"{i}nd")
+	elif i % 10 == 3:
+		print(f"{i}rd")
+	else:
+		print(f"{i}th")
