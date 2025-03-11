@@ -41,3 +41,34 @@ for i in range(1, 200):
 text = "Ich bin ein Text"
 split = text.split(" ")
 print(split)
+
+##################
+
+def countCase(text: str):
+	g, k, s = 0, 0, 0
+	for z in text:
+		if z.islower():
+			k += 1
+		elif z.isupper():
+			g += 1
+		else:
+			s += 1
+	print(f"Groß: {g}, Klein: {k}, Sonderzeichen: {s}")
+
+countCase("Das ist ein Text!")
+
+def printTeilnehmer(*tn):
+	if len(tn) == 0:
+		print("Keine Teilnehmer")
+	elif len(tn) == 1:
+		print(tn[0])
+	else:
+		# print(f"{", ".join(tn[0:-1])} und {tn[-1]}")
+		output = ""
+		for t in tn[0:-1]:
+			output += t + ", "
+		output = output.rstrip(", ")
+		output += " und " + tn[-1]
+		print(output)
+
+printTeilnehmer("Max", "Tim", "Udo", "Bob")
