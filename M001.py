@@ -35,3 +35,9 @@ for i in range(1, 200):
 		print(f"{i}rd")
 	else:
 		print(f"{i}th")
+
+##################
+
+text = "Ich bin ein Text"
+split = text.split(" ")
+print(split)
